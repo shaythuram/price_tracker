@@ -1,2 +1,2 @@
 # price_tracker
-tracks price of items using webscraping
+Tracks price of items using webscraping
