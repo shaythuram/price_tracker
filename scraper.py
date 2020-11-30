@@ -11,7 +11,7 @@ def check_price():
         URL =  input("Please give us the link to the object")
         page = requests.get(URL , headers = headers)    
         soup =BeautifulSoup(page.content , 'html.parser')        
-        title = soup.find(id = "productTitle").get_text()#to find out what id to use, use the ispect elements on google instead of pressing f12 to geenrate the script, Yes it raises issues
+        title = soup.find(id = "productTitle").get_text()#to find out what ID to use, use the inspect elements on google instead of pressing f12 to geenrate the script, Yes it raises issues
         title = title.strip()#clean out blank spaces from html tag
         price = (soup.find(id = "priceblock_ourprice").get_text())
         price = float(price[2:])#to remove the pricing signs i.e s$. You will have to configure it based on your location 
